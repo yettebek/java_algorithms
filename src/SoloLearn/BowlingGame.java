@@ -3,7 +3,7 @@ package SoloLearn;
 *You are creating a bowling game!
 The given code declares a Bowling class with its constructor and addPlayer() method.
 Each player of the game has a name and points, and are stored in the players HashMap.
-The code in main takes 3 players data as input and adds them to the game.
+The code in main takes 3 players' data as input and adds them to the game.
 You need to add a getWinner() method to the class, which calculates and outputs the name of the player with the maximum points.
 
 Sample Input:
@@ -51,23 +51,24 @@ public class BowlingGame {
 
 class Program {
     public static void main(String[] args) {
-        BowlingGame game = new BowlingGame();
+        BowlingGame game = new BowlingGame(); //create new instance of the class BowlingGame
 
         Scanner sc = new Scanner(System.in);
         System.out.println("enter the name (press tab) and points:".toUpperCase());
 
         try {
+            //loop: it'll add 3 new players taking their names and points as input
             for (int i = 0; i < 3; i++) {
                 String input = sc.nextLine();
                 String[] values = input.split(" ");
 
-                String name = values[0];//
-                int points = Integer.parseInt(values[1]);
+                String name = values[0];//take the first input of the array, store as a String
+                int points = Integer.parseInt(values[1]); //take the second input of the array, store as int
 
-                game.addPlayer(name, points);
+                game.addPlayer(name, points); //using the method to add the variables' values into the hashmap
             }
             System.out.println(BowlingGame.players);
-            game.getWinner();
+            game.getWinner(); //returns the String key value associated to the highest Integer maxValue found
 
         } catch (IndexOutOfBoundsException iobe) {
             System.err.println("one or more missing players!\ntry again!".toUpperCase());
