@@ -2,7 +2,8 @@ package Algorithms;
 /*
  * Given the array of itegers, find if the array contains any duplicates. Your function should return true if any value appears at least twice in the array, otherwise it'll return false.
 
- * Given the array of integers, find if the array contains any duplicates. Your function should return true if any value appears at least twice in the array, otherwise it'll return false.
+ * Given the array of integers, find if the array contains any duplicates. Your function should return true if any
+ * value appears at least twice in the array, otherwise it'll return false.
  * */
 
 import java.util.HashSet;
