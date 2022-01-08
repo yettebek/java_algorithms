@@ -34,7 +34,11 @@ public class ReverseInteger {
         try {
             numberInput = sc.nextInt();
 
+<<<<<<< HEAD
         //Si el numero se excede de los 32-bits
+=======
+            //Si el numero se excede de los 32-bits
+>>>>>>> 69532979908ea6b49c721f12b1b210178e304401
         } catch (InputMismatchException ime) {
             System.err.print("error.Number over 32-bits.".toUpperCase());
         }
