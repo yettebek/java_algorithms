@@ -19,10 +19,6 @@ public class TwoSum {
         //For loop recorre el array ArrayNumbers
         for (int i = 0; i < ArrayNumbers.length; i++) {
             //
-<<<<<<< HEAD
-            
-=======
->>>>>>> 69532979908ea6b49c721f12b1b210178e304401
             int key = target - ArrayNumbers[i];
 
             //System.out.println(visitedNumbers.get(key)); //Para visualizar el HashMap
