@@ -1,8 +1,6 @@
 package Algorithms;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 
 public class LotterySimulator {
     public static List<Integer> out, out2;
@@ -11,22 +9,26 @@ public class LotterySimulator {
     public static List<Integer> lotteryNumbers() {
         //Variables
         List<Integer> cpuNumbers = new ArrayList<Integer>();
-
-        for (int i = 0; i < 6; i++) {
+        //Generate 6 positions for the lottery numbers inside the for loop
+        for (int i = 1; i < 7; i++) {
             while (true) {
+                //Generate the random numbers between 1 and 49
                 int num = random.nextInt(49) + 1;
-                if (!cpuNumbers.contains(num)) {
+                //If the number is not in the list, add it, otherwise, continue generating numbers until it is not in the list (while loop)
+                if (!cpuNumbers.contains(num)) { //true
                     cpuNumbers.add(num);
                     break;
                 }
             }
         }
+        //sort the numbers
+        Collections.sort(cpuNumbers);
         return cpuNumbers;
     }
 
     public static List<Integer> lotteryComplement() {
         List<Integer> cpuComplement = new ArrayList<Integer>();
-        for (int i = 0; i < 1; i++) {
+        for (int i = 1; i < 2; i++) {
             int comp = random.nextInt(6) + 1;
             cpuComplement.add(comp);
         }
@@ -34,16 +36,23 @@ public class LotterySimulator {
     }
 
     public static void main(String[] args) {
-
+        //Instantiating the lists for the lottery numbers and the complement in the main method
         out = lotteryNumbers();
         out2 = lotteryComplement();
-        System.out.println("Lottery numbers: " + out + " - " + out2);
 
-        /*//For more than one combinations:
-        for (int i = 1; i < 6; i++) {
-            out = lotteryNumbers();
-            out2 = lotteryComplement();
-            System.out.println(i + ". Lottery numbers: " + out + " - " + out2);
-        }*/
+        //Create a scanner to read the number of combinations to generate
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the number of combinations to generate (1 to 8): ");
+        int combinations = scanner.nextInt();
+
+        if (combinations > 0 && combinations < 9) {
+            for (int i = 1; i <= combinations; i++) {
+                out = lotteryNumbers();
+                out2 = lotteryComplement();
+                System.out.println(i + ". Lottery numbers: " + out + " - " + out2);
+            }
+        } else {
+            System.err.println("Invalid number of combinations".toUpperCase());
+        }
     }
 }
