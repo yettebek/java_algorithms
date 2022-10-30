@@ -45,5 +45,7 @@ public class ReverseAString {
         String text = scanner.nextLine();
 
         System.out.println("Output: " + reverseString(text));
+
+        scanner.close();
     }
 }

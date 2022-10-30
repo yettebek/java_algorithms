@@ -32,5 +32,6 @@ public class BinaryConverter {
         Scanner scanner = new Scanner(System.in);
         int num = scanner.nextInt();
         System.out.println(Converter.toBinary(num));
+        scanner.close();
     }
 }

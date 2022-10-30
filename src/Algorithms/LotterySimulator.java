@@ -54,5 +54,7 @@ public class LotterySimulator {
         } else {
             System.err.println("Invalid number of combinations".toUpperCase());
         }
+
+        scanner.close();
     }
 }

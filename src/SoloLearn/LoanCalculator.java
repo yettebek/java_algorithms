@@ -34,6 +34,6 @@ public class LoanCalculator {
             amount *= 0.9;
         }
         System.out.println("Remaining amount (after 3 months): " + amount);
-
+        scanner.close();
     }
 }

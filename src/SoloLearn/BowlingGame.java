@@ -17,7 +17,6 @@ Amy
 You need to iterate through the HashMap to find the element with the maximum points and output its corresponding key.
  */
 
-import javax.swing.*;
 import java.util.*;
 
 public class BowlingGame {
@@ -73,5 +72,6 @@ class Program {
         } catch (IndexOutOfBoundsException iobe) {
             System.err.println("one or more missing players!\ntry again!".toUpperCase());
         }
+        sc.close();
     }
 }

@@ -45,5 +45,7 @@ public class ContainsDuplicate {
 
         duplicate = containsDuplicate(output);
         System.out.println("\nDoes it contain any duplicates?: " + duplicate);
+        sc.close();  
+
     }
 }

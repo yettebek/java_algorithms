@@ -40,5 +40,6 @@ public class ReverseInteger {
         }
         reverser = reverseFunct(numberInput);
         System.out.println("Reversed integer: ".toUpperCase() + reverser);
+        sc.close();
     }
 }

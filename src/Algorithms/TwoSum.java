@@ -54,5 +54,6 @@ public class TwoSum {
         } catch (IllegalArgumentException iae) {
             System.err.print("sorry. not two sum solution found".toUpperCase());
         }
+        sc.close();
     }
 }

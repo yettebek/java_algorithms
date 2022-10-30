@@ -38,6 +38,8 @@ public class IntegerToRoman {
             String result = intToRoman(num);
 
             System.out.println("Roman number: " + result);
+            
+            sc.close();
 
         } catch (InputMismatchException ime) {
             System.err.println("no letters allowed!".toUpperCase());

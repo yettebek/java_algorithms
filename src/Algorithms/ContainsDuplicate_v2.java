@@ -26,10 +26,10 @@ public class ContainsDuplicate_v2 {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter the nº of integers of the array: ");
         size = sc.nextInt();
-
         int[] nums = new int[size];
 
         System.out.println("Enter the " + size + " number(s) of the array: ");
+         
 
         for (int i = 0; i < size; i++) {
             nums[i] = sc.nextInt();
@@ -42,5 +42,6 @@ public class ContainsDuplicate_v2 {
 
         duplicate = containsDuplicate(nums);
         System.out.println("\n" + "Does it contain any duplicates?: " + duplicate);
+        sc.close();  
     }
 }
