@@ -41,7 +41,6 @@ public class FactorialOfANumber {
                 output = factorial(input);
 
                 sc.close();
-
                 System.out.println("The factorial of " + input + " is " + output);
 
                 // in case we got a number as input, then break the while loop and exit

@@ -13,7 +13,7 @@ public class LotterySimulator {
         for (int i = 1; i < 7; i++) {
             while (true) {
                 //Generate the random numbers between 1 and 49
-                int num = random.nextInt(49) + 1;
+                int num = random.nextInt(49) + 1; // (49) = (from 0 to 48) + 1 
                 //If the number is not in the list, add it, otherwise, continue generating numbers until it is not in the list (while loop)
                 if (!cpuNumbers.contains(num)) { //true
                     cpuNumbers.add(num);
