@@ -39,7 +39,7 @@ public class IntegerToRoman {
 
             System.out.println("Roman number: " + result);
             
-            sc.close();
+            sc.close();  
 
         } catch (InputMismatchException ime) {
             System.err.println("no letters allowed!".toUpperCase());

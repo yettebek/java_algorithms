@@ -21,9 +21,12 @@ public class ContainsDuplicate {
         Set<Integer> set = new HashSet<>(nums.length);
         for (int num : nums) {
             if (set.contains(num)) {
-                return true;
+                System.out.println("\nRepeated number: " + num);
+
+                 return true;
             }
             set.add(num);
+
         }
         return false;
     }
