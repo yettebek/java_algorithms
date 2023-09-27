@@ -1,4 +1,4 @@
-package Algorithms;
+package V2;
 
 public class Persona implements Comparable<Persona> {
     public int edad;

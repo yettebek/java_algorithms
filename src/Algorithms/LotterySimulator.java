@@ -14,8 +14,10 @@ public class LotterySimulator {
             while (true) {
                 // Generate the random numbers between 1 and 49
                 int num = random.nextInt(49) + 1; // (49) = (from 0 to 48) + 1
-                // If the number is not in the list, add it, otherwise, continue generating
-                // numbers until it is not in the list (while loop)
+                /*
+                 * If the number is not in the list, add it, otherwise, continue generating
+                 * numbers until it is not in the list (while loop)
+                 */
                 if (!cpuNumbers.contains(num)) { // true
                     cpuNumbers.add(num);
                     break;
@@ -37,8 +39,10 @@ public class LotterySimulator {
     }
 
     public static void main(String[] args) {
-        // Instantiating the lists for the lottery numbers and the complement in the
-        // main method
+        /*
+         * Instantiating the lists for the lottery numbers and the complement in the
+         * main method
+         */
         out = lotteryNumbers();
         out2 = lotteryComplement();
         while (true) {
@@ -63,10 +67,11 @@ public class LotterySimulator {
                 } else {
                     System.err.println("Invalid number of combinations".toUpperCase());
                 }
+                scanner.close();
             } catch (InputMismatchException ime) {
                 System.out.println("Please. Enter a number between 1 and 8");
             }
         }
-        // scanner.close();
+
     }
 }

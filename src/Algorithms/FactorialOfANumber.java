@@ -17,7 +17,7 @@ public class FactorialOfANumber {
 
         else {
             num *= factorial(num - 1);
-            return num;
+            return num; 
         }
 
         /*// (Non recursive way ) For loop: factorial of a number:

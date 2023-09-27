@@ -1,4 +1,4 @@
-package Algorithms;
+package V2;
 
 public class Cuentas {
     //Variables

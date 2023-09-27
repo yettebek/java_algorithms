@@ -1,4 +1,4 @@
-package SoloLearn;
+package Algorithms;
 
 public class WhoLikesIt {
 
