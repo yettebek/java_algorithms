@@ -14,41 +14,30 @@ public class FromAToZ {
 
     public static void main(String[] args) {
         String upperCaseLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+        //String lowerCaseLetters = upperCaseLetters.toLowerCase();
+
         
-        String lowerCaseLetters = upperCaseLetters.toLowerCase();
 
-        String[] letter = upperCaseLetters.split("");
+        System.out.print("Your word here > ");
+        Scanner sc = new Scanner(System.in);
+        String[] letters = sc.nextLine().split("-"); // split the string by hyphen so that i can get each letter
+        
+        // i need get the first and second letter separated
+        String firstLetter = letters[0];
+        String secondLetter = letters[1];
 
-        // Chosen letter i need to find the index of each letter
-        String firstLetter = "b";
-        String secondLetter = "b";
-        int indexfirst = 0, indexsecond = 0;
+        // Saving the index of the first and second letter
+        int indexfirst = upperCaseLetters.indexOf(firstLetter),
+                indexsecond = upperCaseLetters.indexOf(secondLetter) + 1;
 
-        for (int i = 0; i < letter.length; i++) {
-            // System.out.println("Letter nº " + i + " = " + letter[i]);
-            if (firstLetter.equalsIgnoreCase(letter[i])) {
-                indexfirst = i;
-                
-            } else if (secondLetter.equalsIgnoreCase(letter[i])) {
-                indexsecond = i+1; //we meed to include it because of substring(endIndex)
-            } else if (firstLetter.equalsIgnoreCase(secondLetter)) {
-               
-            }
+        System.out.println("FIRST LETTER INDEX: " + indexfirst);
+        System.out.println("SECOND LETTER INDEX: " + indexsecond);
 
-        }
-        System.out.println("Index of firstLetter = " + indexfirst);
-        System.out.println("Index of secondLetter = " + indexsecond);
-
-        //Substring
+        // Substring
         System.out.println("Substring: " + upperCaseLetters.substring(indexfirst, indexsecond));
-        /*
-         * System.out.print("Your word here >  ");
-         * Scanner sc = new Scanner(System.in);
-         * String input = sc.nextLine();
-         * 
-         * System.out.println("Substring: " + input.substring(3, 7+1));
-         * sc.close();
-         */
+        sc.close();
+
     }
 
 }
