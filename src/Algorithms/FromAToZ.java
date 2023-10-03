@@ -10,34 +10,48 @@ import java.util.Scanner;
  * 
  * 
  */
+
 public class FromAToZ {
 
     public static void main(String[] args) {
-        String upperCaseLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        String allTheLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-        //String lowerCaseLetters = upperCaseLetters.toLowerCase();
-
-        
-
-        System.out.print("Your word here > ");
+        System.out.print("Enter range of letters separated by a hyphen (e.g. A-Z)> ");
         Scanner sc = new Scanner(System.in);
         String[] letters = sc.nextLine().split("-"); // split the string by hyphen so that i can get each letter
-        
-        // i need get the first and second letter separated
+
+        // i need get the first and second letter isolated in a variable
         String firstLetter = letters[0];
         String secondLetter = letters[1];
 
+        // Checking if the first and second letter are uppercase or lowercase
+        boolean isFirstLetterUppercase = Character.isUpperCase(firstLetter.charAt(0));
+        boolean isSecondLetterUppercase = Character.isUpperCase(secondLetter.charAt(0));
+
         // Saving the index of the first and second letter
-        int indexfirst = upperCaseLetters.indexOf(firstLetter),
-                indexsecond = upperCaseLetters.indexOf(secondLetter) + 1;
+        int upperIndexfirst = allTheLetters.indexOf(firstLetter),
+                upperIndexsecond = allTheLetters.indexOf(secondLetter) + 1;
 
-        System.out.println("FIRST LETTER INDEX: " + indexfirst);
-        System.out.println("SECOND LETTER INDEX: " + indexsecond);
+        int lowerIndexfirst = allTheLetters.toLowerCase().indexOf(firstLetter),
+                lowerIndexsecond = allTheLetters.toLowerCase().indexOf(secondLetter) + 1;
 
-        // Substring
-        System.out.println("Substring: " + upperCaseLetters.substring(indexfirst, indexsecond));
+        if (isFirstLetterUppercase && isSecondLetterUppercase) {
+            System.out.println("Both letters are uppercase".toUpperCase());
+            // index of first and second letter
+            System.out.println("FIRST LETTER INDEX: " + upperIndexfirst);
+            System.out.println("SECOND LETTER INDEX: " + upperIndexsecond);
+
+            // Substring
+            System.out.println("Substring: " + allTheLetters.substring(upperIndexfirst, upperIndexsecond));
+        } else {
+            System.out.println("both letters are lowercase".toUpperCase());
+            // index of first and second letter
+            System.out.println("FIRST LETTER INDEX: " + lowerIndexfirst);
+            System.out.println("SECOND LETTER INDEX: " + lowerIndexsecond);
+            // Substring
+            System.out
+                    .println("Substring: " + allTheLetters.toLowerCase().substring(lowerIndexfirst, lowerIndexsecond));
+        }
         sc.close();
-
     }
-
 }
