@@ -12,13 +12,18 @@ import java.util.Scanner;
  */
 
 public class FromAToZ {
+    public static String gimmeTheLetters(String input) {
 
-    public static void main(String[] args) {
         String allTheLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        Scanner sc = new Scanner(System.in);
 
         System.out.print("Enter range of letters separated by a hyphen (e.g. A-Z)> ");
-        Scanner sc = new Scanner(System.in);
-        String[] letters = sc.nextLine().split("-"); // split the string by hyphen so that i can get each letter
+
+        // store the input in a string variable
+        input = sc.nextLine();
+        sc.close();
+
+        String[] letters = input.split("-"); // split the string by hyphen so that i can get each letter
 
         // i need get the first and second letter isolated in a variable
         String firstLetter = letters[0];
@@ -35,23 +40,24 @@ public class FromAToZ {
         int lowerIndexfirst = allTheLetters.toLowerCase().indexOf(firstLetter),
                 lowerIndexsecond = allTheLetters.toLowerCase().indexOf(secondLetter) + 1;
 
+
         if (isFirstLetterUppercase && isSecondLetterUppercase) {
-            System.out.println("Both letters are uppercase".toUpperCase());
             // index of first and second letter
-            System.out.println("FIRST LETTER INDEX: " + upperIndexfirst);
-            System.out.println("SECOND LETTER INDEX: " + upperIndexsecond);
+             System.out.println("FIRST LETTER INDEX: " + upperIndexfirst);
+             System.out.println("SECOND LETTER INDEX: " + upperIndexsecond);
 
             // Substring
-            System.out.println("Substring: " + allTheLetters.substring(upperIndexfirst, upperIndexsecond));
+            return allTheLetters.substring(upperIndexfirst, upperIndexsecond);
         } else {
-            System.out.println("both letters are lowercase".toUpperCase());
             // index of first and second letter
-            System.out.println("FIRST LETTER INDEX: " + lowerIndexfirst);
-            System.out.println("SECOND LETTER INDEX: " + lowerIndexsecond);
+             System.out.println("FIRST LETTER INDEX: " + lowerIndexfirst);
+             System.out.println("SECOND LETTER INDEX: " + lowerIndexsecond);
             // Substring
-            System.out
-                    .println("Substring: " + allTheLetters.toLowerCase().substring(lowerIndexfirst, lowerIndexsecond));
+            return allTheLetters.toLowerCase().substring(lowerIndexfirst, lowerIndexsecond);
         }
-        sc.close();
+    }
+
+    public static void main(String[] args) {
+        System.out.println(gimmeTheLetters(""));
     }
 }
