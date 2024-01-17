@@ -9,7 +9,11 @@ public class WhoLikesIt {
 
         switch (namesLength) {
             case 0:
+<<<<<<< HEAD
                 return "no one likes this";
+=======
+                return String.format("no one likes this");
+>>>>>>> 17a0938a6f2ca6e122484646264787a3dd71534d
             case 1:
                 return String.format("%s likes this", names[0]);
             case 2:
