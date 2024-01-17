@@ -55,7 +55,7 @@ cmake-build-*/
 # IntelliJ
 out/
 src/Tests
-.idea
+.idea/
 
 # mpeltonen/sbt-idea plugin
 .idea_modules/
@@ -104,7 +104,6 @@ modules.xml
 # Azure Toolkit for IntelliJ plugin
 # https://plugins.jetbrains.com/plugin/8053-azure-toolkit-for-intellij
 .idea/**/azureSettings.xml
-<<<<<<< HEAD
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
