@@ -21,32 +21,6 @@
 # Generated files
 .idea/**/contentModel.xml
 
-<<<<<<< HEAD
-### Intellij ###
-# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, WebStorm and Rider
-# Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
-
-#Java class files
-*.class
-
-#VsCode settings file
-*.vscode
-
-# User-specific stuff
-.idea/**/workspace.xml
-.idea/**/tasks.xml
-.idea/**/usage.statistics.xml
-.idea/**/dictionaries
-.idea/**/shelf
-
-# AWS User-specific
-.idea/**/aws.xml
-
-# Generated files
-.idea/**/contentModel.xml
-
-=======
->>>>>>> 17a0938a6f2ca6e122484646264787a3dd71534d
 # Sensitive or high-churn files
 .idea/**/dataSources/
 .idea/**/dataSources.ids
@@ -67,8 +41,7 @@
 .idea/modules.xml
 .idea/*.iml
 .idea/modules
-*.iml
-*.ipr
+
 
 # CMake
 cmake-build-*/
@@ -135,5 +108,4 @@ modules.xml
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
-=======
->>>>>>> 17a0938a6f2ca6e122484646264787a3dd71534d
+
