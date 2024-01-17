@@ -1,4 +1,4 @@
-package SoloLearn;
+package Algorithms;
 
 import java.util.Scanner;
 
@@ -20,8 +20,8 @@ public class BinaryConverter {
             String binary = "";
             while (num > 0) {
                 //Convert the int value into String to store it into the 'binary' variable
-                binary = String.valueOf(num % 2 + binary); //el resto de la división se añade al string 'binary'
-                num /= 2;
+                binary = String.valueOf(num % 2 + binary); //the remainder of num modulo 2 is stored in binary
+                num /= 2; //the value of num is now divided by 2
             }
             return binary;
         }
@@ -29,8 +29,10 @@ public class BinaryConverter {
 
 
     public static void main(String[] args) {
+        System.out.print("Enter a number: ");
         Scanner scanner = new Scanner(System.in);
         int num = scanner.nextInt();
-        System.out.println(Converter.toBinary(num));
+        System.out.println("Binary: "+ Converter.toBinary(num));
+        scanner.close();
     }
 }

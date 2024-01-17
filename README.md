@@ -1,2 +1,3 @@
-# java_algorithms
-Java algorithms / Testing
+# **java_algorithms**
+* Java algorithms and exercises.
+    

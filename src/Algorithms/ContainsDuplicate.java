@@ -21,16 +21,19 @@ public class ContainsDuplicate {
         Set<Integer> set = new HashSet<>(nums.length);
         for (int num : nums) {
             if (set.contains(num)) {
-                return true;
+                System.out.println("\nRepeated number: " + num);
+
+                 return true;
             }
             set.add(num);
+
         }
         return false;
     }
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter the nº of integers of the array: ");
+        System.out.print("How many numbers do you want?: ");
         size = sc.nextInt();
 
         int[] output = new int[size];
@@ -45,5 +48,7 @@ public class ContainsDuplicate {
 
         duplicate = containsDuplicate(output);
         System.out.println("\nDoes it contain any duplicates?: " + duplicate);
+        sc.close();  
+
     }
 }

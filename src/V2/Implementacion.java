@@ -1,4 +1,4 @@
-package Algorithms;
+package V2;
 import java.util.*;
 //USES THE Persona.java CLASS
 public class Implementacion {

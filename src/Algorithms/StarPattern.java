@@ -3,12 +3,15 @@ package Algorithms;
 public class StarPattern {
     public static void main(String[] args) {
         //DECREASING LEFT TRIANGLE
-        /*for (int i = 1; i <= 10; i++) {
+        for (int i = 1; i <= 10; i++) {
             for (int j = 10; j >= i; j--) {
                 System.out.print("*");
             }
             System.out.println();
-        }*/
+        }
+
+        //Line break
+        System.out.println("\n----------------------------------\n");
 
         //DECREASING RIGHT TRIANGLE (1.Increasing space - 2.Decreasing star)
         //1.For loop: number of rows

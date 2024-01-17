@@ -16,9 +16,9 @@ public class FizzBuzz {
     public static List<String> fizzBuzzList(int num) {
         List<String> numbersList = new ArrayList<>();
 
-        if (num >= 1 && num <= 10000) {
+        if (num >= 1 && num <= 1000) {
             for (int i = 1; i <= num; i++) {
-                if ((i % 3 == 0) && (i % 5 == 0)) {
+                if ((i % 15) == 0) {
                     numbersList.add("fizzbuzz".toUpperCase());
                 } else if (i % 3 == 0) {
                     numbersList.add("fizz".toUpperCase());
@@ -43,5 +43,6 @@ public class FizzBuzz {
         List<String> output = fizzBuzzList(num);
 
         System.out.println(output);
+        sc.close();
     }
 }
