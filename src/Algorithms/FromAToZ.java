@@ -34,12 +34,12 @@ public class FromAToZ {
         boolean isSecondLetterUppercase = Character.isUpperCase(secondLetter.charAt(0));
 
         // Saving the index of the first and second letter
+
         int upperIndexfirst = allTheLetters.indexOf(firstLetter),
                 upperIndexsecond = allTheLetters.indexOf(secondLetter) + 1;
 
         int lowerIndexfirst = allTheLetters.toLowerCase().indexOf(firstLetter),
                 lowerIndexsecond = allTheLetters.toLowerCase().indexOf(secondLetter) + 1;
-
 
         if (isFirstLetterUppercase && isSecondLetterUppercase) {
             // index of first and second letter
@@ -54,6 +54,7 @@ public class FromAToZ {
              System.out.println("SECOND LETTER INDEX: " + lowerIndexsecond);
             // Substring
             return allTheLetters.toLowerCase().substring(lowerIndexfirst, lowerIndexsecond);
+
         }
     }
 
