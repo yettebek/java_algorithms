@@ -12,6 +12,37 @@ import java.util.Scanner;
  */
 
 public class FromAToZ {
+
+    public static void main(String[] args) {
+        String upperCaseLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+        //String lowerCaseLetters = upperCaseLetters.toLowerCase();
+
+        
+
+        System.out.print("Your word here > ");
+        Scanner sc = new Scanner(System.in);
+        String[] letters = sc.nextLine().split("-"); // split the string by hyphen so that i can get each letter
+        
+        // i need get the first and second letter separated
+        String firstLetter = letters[0];
+        String secondLetter = letters[1];
+
+        // Saving the index of the first and second letter
+        int indexfirst = upperCaseLetters.indexOf(firstLetter),
+                indexsecond = upperCaseLetters.indexOf(secondLetter) + 1;
+
+        System.out.println("FIRST LETTER INDEX: " + indexfirst);
+        System.out.println("SECOND LETTER INDEX: " + indexsecond);
+
+        // Substring
+        System.out.println("Substring: " + upperCaseLetters.substring(indexfirst, indexsecond));
+        sc.close();
+
+    }
+
+
+public class FromAToZ {
     public static String gimmeTheLetters(String input) {
 
         String allTheLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -34,12 +65,12 @@ public class FromAToZ {
         boolean isSecondLetterUppercase = Character.isUpperCase(secondLetter.charAt(0));
 
         // Saving the index of the first and second letter
+
         int upperIndexfirst = allTheLetters.indexOf(firstLetter),
                 upperIndexsecond = allTheLetters.indexOf(secondLetter) + 1;
 
         int lowerIndexfirst = allTheLetters.toLowerCase().indexOf(firstLetter),
                 lowerIndexsecond = allTheLetters.toLowerCase().indexOf(secondLetter) + 1;
-
 
         if (isFirstLetterUppercase && isSecondLetterUppercase) {
             // index of first and second letter
@@ -54,6 +85,7 @@ public class FromAToZ {
              System.out.println("SECOND LETTER INDEX: " + lowerIndexsecond);
             // Substring
             return allTheLetters.toLowerCase().substring(lowerIndexfirst, lowerIndexsecond);
+
         }
     }
 

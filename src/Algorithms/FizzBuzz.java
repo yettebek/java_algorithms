@@ -18,7 +18,7 @@ public class FizzBuzz {
 
         if (num >= 1 && num <= 1000) {
             for (int i = 1; i <= num; i++) {
-                if ((i % 3 == 0) && (i % 5 == 0)) {
+                if ((i % 15) == 0) {
                     numbersList.add("fizzbuzz".toUpperCase());
                 } else if (i % 3 == 0) {
                     numbersList.add("fizz".toUpperCase());
