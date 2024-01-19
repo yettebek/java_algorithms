@@ -10,7 +10,7 @@ import java.util.Scanner;
  * 
  * 
  */
-<<<<<<< HEAD
+
 public class FromAToZ {
 
     public static void main(String[] args) {
@@ -41,7 +41,6 @@ public class FromAToZ {
 
     }
 
-=======
 
 public class FromAToZ {
     public static String gimmeTheLetters(String input) {
@@ -93,5 +92,4 @@ public class FromAToZ {
     public static void main(String[] args) {
         System.out.println(gimmeTheLetters(""));
     }
->>>>>>> 17a0938a6f2ca6e122484646264787a3dd71534d
 }

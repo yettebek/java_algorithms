@@ -33,10 +33,11 @@ public class MangoesPrice {
         }
      }
     public static void main(String[] args) {
-<<<<<<< HEAD
+
         mangos(3, 5);
-=======
+
         mangos(0, 0);
->>>>>>> 17a0938a6f2ca6e122484646264787a3dd71534d
+
+        mangos(0, 0);
     }
 }
