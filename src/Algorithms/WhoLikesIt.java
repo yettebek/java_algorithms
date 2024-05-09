@@ -9,7 +9,7 @@ public class WhoLikesIt {
 
         switch (namesLength) {
             case 0:
-                return String.format("no one likes this");
+                return "no one likes this";
             case 1:
                 return String.format("%s likes this", names[0]);
             case 2:

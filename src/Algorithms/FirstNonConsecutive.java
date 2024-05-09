@@ -17,11 +17,12 @@ public class FirstNonConsecutive {
 
         for (int i = 0; i < arrayOfNumbers.length - 1; i++) { //length - 1 ==> This ensures that the loop only iterates until the last element of the array, preventing the out-of-bounds error.
 
-            if (((arrayOfNumbers[i]) - (arrayOfNumbers[i + 1])) == negative
-                    || ((arrayOfNumbers[i]) - (arrayOfNumbers[i + 1])) == positive) {
+            //variable to store the difference between the current element and the next element
+            int difference = arrayOfNumbers[i] - arrayOfNumbers[i+1];
 
-            } else {
-                return Integer.valueOf(arrayOfNumbers[i + 1]);
+            if (difference != negative && difference != positive) {
+
+                return arrayOfNumbers[i + 1];
             }
         }
 
@@ -30,7 +31,7 @@ public class FirstNonConsecutive {
 
     public static void main(String[] args) {
 
-        int[] arrNew = {-3, -2, -1, 0, 1};
+        int[] arrNew = {-3, -27, -1, 0, 1};
         System.out.println("\n" + find(arrNew));
 
     }

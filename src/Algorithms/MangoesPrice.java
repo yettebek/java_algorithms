@@ -33,6 +33,11 @@ public class MangoesPrice {
         }
      }
     public static void main(String[] args) {
+
+        mangos(3, 5);
+
+        mangos(0, 0);
+
         mangos(0, 0);
     }
 }
