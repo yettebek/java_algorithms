@@ -7,6 +7,7 @@
 
 #VsCode settings file
 *.vscode
+*.code-workspace
 
 # User-specific stuff
 .idea/**/workspace.xml
