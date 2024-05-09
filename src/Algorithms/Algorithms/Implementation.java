@@ -4,6 +4,8 @@ import java.util.Collections;
 import java.util.NoSuchElementException;
 import java.util.Vector;
 
+import V2.Persona;
+
 //USES THE Persona.java CLASS TO CREATE A VECTOR OF PERSONAS AND SORT THEM BY EDAD
 public class Implementation {
     public static void main(String[] args) {

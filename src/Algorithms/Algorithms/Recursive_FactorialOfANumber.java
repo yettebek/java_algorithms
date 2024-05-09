@@ -1,8 +1,9 @@
 package Algorithms;
 
-import java.util.*;
+import java.util.Scanner;
+import java.util.InputMismatchException;
 
-public class FactorialOfANumber {
+public class Recursive_FactorialOfANumber {
     // static variable
     public static int output = 0;
 
@@ -14,20 +15,10 @@ public class FactorialOfANumber {
         if (num == 0) {
             return 1;
         }
-
         else {
             num *= factorial(num - 1);
             return num; 
         }
-
-        /*// (Non recursive way ) For loop: factorial of a number:
-        
-        int baseNumber = 1;
-        for (int i = 1; i<= num; i++) {
-            baseNumber *= i;
-        }
-        return baseNumber;
-        */
     }
 
     public static void main(String[] args) {
@@ -43,13 +34,14 @@ public class FactorialOfANumber {
                 sc.close();
                 System.out.println("The factorial of " + input + " is " + output);
 
-                // in case we got a number as input, then break the while loop and exit
+                // if the user enters a number as input, it'll break the while loop
                 break;
-
+                            
+                // if the user enters a string as input, it'll throw an exception
             } catch (InputMismatchException ime) {
-
                 System.out.println("Not a number. Try again".toUpperCase());
             }
         }
     }
 }
+
