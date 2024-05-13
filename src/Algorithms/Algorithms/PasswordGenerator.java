@@ -3,7 +3,6 @@ package Algorithms;
 public class PasswordGenerator {
     // Create a method that creates a random string of letters and numbers:
     public static String generatePassword() {
-
         String alphanumericString = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789)(+!¿?_@#$%^&*";
 
         StringBuilder password = new StringBuilder();
