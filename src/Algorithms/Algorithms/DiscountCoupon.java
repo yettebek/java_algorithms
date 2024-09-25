@@ -1,4 +1,4 @@
-package Algorithms;
+package Algorithms.Algorithms;
 
 import java.time.LocalDate;
 import java.util.Scanner;
@@ -31,7 +31,7 @@ public class DiscountCoupon {
 
         System.out.printf("\nTODAY IS %s%n", todayDate);
 
-        System.out.print("\nEnter the total consumed: ".toUpperCase());
+        System.out.print("\nEnter the amount consumed: ".toUpperCase());
         bigDecimal = sc.nextBigDecimal();
         consumedAmount = bigDecimal.setScale(2, RoundingMode.HALF_UP);
 

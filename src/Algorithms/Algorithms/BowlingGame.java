@@ -1,4 +1,4 @@
-package Algorithms;
+package Algorithms.Algorithms;
 /*
 *You are creating a bowling game!
 The given code declares a Bowling class with its constructor and addPlayer() method.

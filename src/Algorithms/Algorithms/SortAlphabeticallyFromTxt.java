@@ -1,4 +1,4 @@
-package Algorithms;
+package Algorithms.Algorithms;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;

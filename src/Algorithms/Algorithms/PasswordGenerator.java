@@ -1,4 +1,4 @@
-package Algorithms;
+package Algorithms.Algorithms;
 
 public class PasswordGenerator {
     // Create a method that creates a random string of letters and numbers:

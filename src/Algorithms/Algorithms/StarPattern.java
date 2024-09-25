@@ -1,4 +1,4 @@
-package Algorithms;
+package Algorithms.Algorithms;
 
 public class StarPattern {
     public static void main(String[] args) {

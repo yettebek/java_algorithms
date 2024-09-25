@@ -1,4 +1,4 @@
-package Algorithms;
+package Algorithms.Algorithms;
 
 import java.util.Scanner;
 import java.util.InputMismatchException;

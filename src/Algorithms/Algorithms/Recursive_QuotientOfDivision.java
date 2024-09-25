@@ -1,4 +1,4 @@
-package Algorithms;
+package Algorithms.Algorithms;
 
 public class Recursive_QuotientOfDivision {
     // the function counts the number of recursive calls it makes before
