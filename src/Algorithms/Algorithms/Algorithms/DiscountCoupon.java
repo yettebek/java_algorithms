@@ -11,14 +11,14 @@ public class DiscountCoupon {
      * TRUE CASE = DATE HASN'T EXPIRED YET AND THE MINIMUM COMSUMPTION IS 27.5EUR
      * FALSE CASE = DATE HAS EXPIRED AND/OR MINIMUM COMSUPTION IS LOWER THAN 27.5
      */
+
     // Variables
-    // actual amount by the client
-    public static BigDecimal bigDecimal, consumedAmount, discountedAmount;
+    private static BigDecimal bigDecimal, consumedAmount;
 
     public static void isCouponValid() {
 
         // minimum amount necessary
-        double minAmount = 27.5;
+        BigDecimal minAmount = new BigDecimal(27.5);
 
         // Expiration coupon's date
         LocalDate expirationDiscountDate = LocalDate.of(2024, 9, 30);
@@ -30,34 +30,43 @@ public class DiscountCoupon {
         Scanner sc = new Scanner(System.in);
 
         System.out.printf("\nTODAY IS %s%n", todayDate);
+        try {
+            System.out.print("\nEnter the amount consumed: ".toUpperCase());
+            bigDecimal = sc.nextBigDecimal();
+            consumedAmount = bigDecimal.setScale(2);
 
-        System.out.print("\nEnter the amount consumed: ".toUpperCase());
-        bigDecimal = sc.nextBigDecimal();
-        consumedAmount = bigDecimal.setScale(2, RoundingMode.HALF_UP);
-
-        System.out.printf("\nTOTAL CONSUMED: %.2f EUR", consumedAmount);
+        } catch (ArithmeticException e) {
+            System.err.println("Please, enter 2 decimals.".toUpperCase());
+            System.exit(1);
+        }
 
         sc.close();
+
+        // Coupon validation
+        if ((consumedAmount.compareTo(minAmount) >= 0) && !(todayDate.isAfter(expirationDiscountDate))) {
+            System.out.println("Eligible coupon.".toUpperCase());
+            applyDiscount();
+        } else {
+            System.out.println("Error. Invalid coupon or/and consumption lower than 27.5 EUR".toUpperCase());
+        }
     }
 
-    public static BigDecimal applyDiscount() {
+    public static void applyDiscount() {
         System.out.println("\napplying 15% discount...".toUpperCase());
 
         // Applying a 15% discount
         double discount = 0.85;
-        
-        //Obtain the 2 decimal numbers only
-        BigDecimal roundedFloor = consumedAmount.multiply(BigDecimal.valueOf(discount));
 
-        return roundedFloor.setScale(2, RoundingMode.FLOOR);
+        // Obtain the 2 decimal numbers only
+        BigDecimal discountedAmount = consumedAmount.multiply(BigDecimal.valueOf(discount));
+        discountedAmount.setScale(2, RoundingMode.FLOOR);
+
+        // DecimalFormat df = new DecimalFormat("#0.00");
+        // System.out.printf("TOTAL: " + df.format(discountedAmount) + " EUR");
+        System.out.printf("TOTAL: %.2f EUR", discountedAmount);
     }
 
     public static void main(String[] args) {
         isCouponValid();
-        discountedAmount = applyDiscount();
-        //DecimalFormat df = new DecimalFormat("#0.00");
-        //System.out.printf("TOTAL: " + df.format(discountedAmount) + " EUR");
-        System.out.printf("TOTAL: %.2f EUR", discountedAmount);
-
     }
 }
