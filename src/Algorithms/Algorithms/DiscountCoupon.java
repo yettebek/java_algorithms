@@ -11,7 +11,7 @@ public class DiscountCoupon {
      * TRUE CASE = DATE HASN'T EXPIRED YET AND THE MINIMUM COMSUMPTION IS 27.5EUR
      * FALSE CASE = DATE HAS EXPIRED AND/OR MINIMUM COMSUPTION IS LOWER THAN 27.5
      */
-    
+
     // Variables
     private static BigDecimal bigDecimal, consumedAmount;
 
@@ -21,7 +21,7 @@ public class DiscountCoupon {
         BigDecimal minAmount = new BigDecimal(27.5);
 
         // Expiration coupon's date
-        LocalDate expirationDiscountDate = LocalDate.of(2024, 9, 30);
+        LocalDate expirationDiscountDate = LocalDate.of(2024, 10, 30);
 
         // Today's date
         LocalDate todayDate = LocalDate.now();
@@ -43,11 +43,13 @@ public class DiscountCoupon {
         sc.close();
 
         // Coupon validation
-        if ((consumedAmount.compareTo(minAmount) >= 0) && !(todayDate.isAfter(expirationDiscountDate))) {
+        if (consumedAmount.compareTo(minAmount) < 0) {
+            System.out.println("Error. Consumption lower than 27.5 EUR".toUpperCase());
+        } else if (todayDate.isAfter(expirationDiscountDate)) {
+            System.out.println("Error. Coupon has expired.".toUpperCase() + " (" + expirationDiscountDate + ")");
+        } else {
             System.out.println("Eligible coupon.".toUpperCase());
             applyDiscount();
-        }else{
-            System.out.println("Error. Invalid coupon or/and consumption lower than 27.5 EUR".toUpperCase());
         }
     }
 
@@ -67,6 +69,6 @@ public class DiscountCoupon {
     }
 
     public static void main(String[] args) {
-        isCouponValid();        
+        isCouponValid();
     }
 }
