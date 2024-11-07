@@ -2,6 +2,7 @@ package Algorithms.Algorithms;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Scanner;
 
 /*Write a function cakes(), which takes the recipe (object) and the available ingredients (also an object) and returns the maximum number of cakes Pete can bake (integer). 
 For simplicity there are no units for the amounts (e.g. 1 lb of flour or 200 g of sugar are simply 1 or 200). Ingredients that are not present in the objects, can be considered as 0. 
@@ -33,7 +34,7 @@ public class PeteBakerVerbose {
 
             // Get the amount of the ingredient available
             int availableAmount = availableIngredients.getOrDefault(ingredient, 0);
-            System.out.println("Available amount of " + ingredient + ": " + availableAmount+"\n");
+            System.out.println("Available amount of " + ingredient + ": " + availableAmount + "\n");
 
             // Calculate the number of cakes that can be made with the available amount of
             // the ingredient
@@ -49,14 +50,29 @@ public class PeteBakerVerbose {
     }
 
     public static void main(String[] args) {
-        Map<String, Integer> recipe = Map.of("flour", 500, "sugar", 200, "eggs", 1, "milk", 200);
-
+        Scanner scanner = new Scanner(System.in);
+        // List of available ingredients
         Map<String, Integer> availableIngredients = new HashMap<>();
         availableIngredients.put("flour", 1200);
         availableIngredients.put("sugar", 1200);
         availableIngredients.put("eggs", 5);
         availableIngredients.put("oil", 100);
 
-        System.out.println("Number of cakes Pete can bake: " + cakes(recipe, availableIngredients));
+        System.out.println(
+                "Enter the recipe ingredients (separated by commas) and their quantities (e.g. flour,100,sugar,200):");
+        try {
+            String[] input = scanner.nextLine().trim().split(",");
+
+            Map<String, Integer> recipe = new HashMap<>();
+            for (int i = 0; i < input.length; i += 2) {
+                recipe.put(input[i], Integer.parseInt(input[i + 1]));
+            }
+            scanner.close();
+            System.out.println("Number of cakes Pete can bake: " + cakes(recipe, availableIngredients));
+
+        } catch (ArrayIndexOutOfBoundsException | NumberFormatException e) {
+            // Handle the exception here
+            System.out.println("Invalid input. \nEnter the recipe ingredients (separated by commas) and their quantities (e.g. flour,100,sugar,200).".toUpperCase());
+        }
     }
 }
