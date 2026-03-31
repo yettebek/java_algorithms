@@ -43,15 +43,15 @@ public class FromAToZ {
 
         if (isFirstLetterUppercase && isSecondLetterUppercase) {
             // index of first and second letter
-             System.out.println("FIRST LETTER INDEX: " + upperIndexfirst);
-             System.out.println("SECOND LETTER INDEX: " + upperIndexsecond);
+            System.out.println("FIRST LETTER INDEX: " + upperIndexfirst);
+            System.out.println("SECOND LETTER INDEX: " + upperIndexsecond);
 
             // Substring
             return allTheLetters.substring(upperIndexfirst, upperIndexsecond);
         } else {
             // index of first and second letter
-             System.out.println("FIRST LETTER INDEX: " + lowerIndexfirst);
-             System.out.println("SECOND LETTER INDEX: " + lowerIndexsecond);
+            System.out.println("FIRST LETTER INDEX: " + lowerIndexfirst);
+            System.out.println("SECOND LETTER INDEX: " + lowerIndexsecond);
             // Substring
             return allTheLetters.toLowerCase().substring(lowerIndexfirst, lowerIndexsecond);
 
