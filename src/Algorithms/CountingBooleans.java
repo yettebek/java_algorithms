@@ -1,4 +1,4 @@
-package Algorithms.Algorithms;
+package Algorithms;
 
 /**
  * CountingBooleans
