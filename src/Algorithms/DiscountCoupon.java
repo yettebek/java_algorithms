@@ -1,4 +1,4 @@
-package Algorithms.Algorithms;
+package Algorithms;
 
 import java.time.LocalDate;
 import java.util.Scanner;

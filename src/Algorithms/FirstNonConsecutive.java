@@ -1,4 +1,4 @@
-package Algorithms.Algorithms;
+package Algorithms;
 
 /*Your task is to find the first element of an array that is not consecutive.
 

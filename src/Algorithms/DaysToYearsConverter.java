@@ -1,5 +1,4 @@
-package Algorithms.Algorithms;
-
+package Algorithms;
 public class DaysToYearsConverter {
     public static void main(String[] args) {
         int totalDays = 77;

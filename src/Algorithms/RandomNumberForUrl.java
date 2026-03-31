@@ -1,4 +1,4 @@
-package Algorithms.Algorithms;
+package Algorithms;
 
 import java.io.FileWriter;
 import java.io.IOException;

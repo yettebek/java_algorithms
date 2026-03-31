@@ -1,4 +1,4 @@
-package Algorithms.Algorithms;
+package Algorithms;
 
 public class FibonacciSequence {
     public static void main(String[] args) {

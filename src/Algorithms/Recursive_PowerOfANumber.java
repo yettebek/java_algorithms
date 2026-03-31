@@ -1,4 +1,4 @@
-package Algorithms.Algorithms;
+package Algorithms;
 
 //The Power of a Number is a mathematical operation that consists of multiplying a number by itself several times.
 public class Recursive_PowerOfANumber {

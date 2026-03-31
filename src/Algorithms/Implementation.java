@@ -1,4 +1,4 @@
-package Algorithms.Algorithms;
+package Algorithms;
 
 import java.util.Collections;
 import java.util.NoSuchElementException;
